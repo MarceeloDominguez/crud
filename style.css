@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Popping', sans-serif;
+    background: rgba(241, 244, 245, 0.5);
+}
+
+header{
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-label {
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    border-radius: 3px;
+    height: 45px;
+    font-size: 2rem;
+    padding: 10px;
+    border: 2px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.5);
+}
+
+.form-input:hover {
+    border: 1px solid rgb(48, 175, 248);
+}
+
+.div-boton {
+    display: flex;
+    justify-content: center;
+}
+
+.form-btn {
+    height: 45px;
+    width: 50%;
+    background: #0075ff;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s ease all;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.5);
+}
+
+.form-btn:focus {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.form-btn:hover {
+    color: white;
+    background: rgb(48, 175, 248);
+}
+
+/*************** select *******************/
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 2px solid #0075ff;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.5);
+}
+
+select {
+    color: black;
+    width: 50%;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+
+.select {
+    position: relative;
+}
+
+.select::after {
+    content: "\25bc";
+    color: white;
+    right: 87px;
+    top: 0px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.select::after {
+    background: #0075ff;
+    padding: 0.85rem;
+    border-radius: 0 3px 3px 0;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    color: rgb(48, 175, 248);
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-btn {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .select::after {
+        right: 0px;
+        top: 0px;
+    }
+
+    header {
+        font-size: 0.7rem;
+    }
+}
+
+/************ Informacion Dom ************/
+
+.informacion-dom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-datos {
+    min-width: 120%;
+}
+
+@media screen and (max-width: 900px){
+    .lista-datos {
+        min-width: 100%;
+    }
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+.datos {
+    width: 100%;
+    padding: 0.2rem 0.2rem;
+    border: 1px solid rgb(48, 175, 248);
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.5);
+    background: rgb(48, 175, 248, 0.5);
+}
+
+button {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.5)
+}
+
+.delete-btn {
+    border: none;
+    outline: none;
+    background: red;
+    color: white;
+    width: 30px;
+    height: 37px;
+}
+
+.delete-btn:hover {
+    background:  rgba(238, 5, 5, 0.5);
+}
+
+.edit-btn {
+    border: none;
+    outline: none;
+    background: tomato;
+    color: white;
+    width: 30px;
+    height: 37px;
+}
+
+.edit-btn:hover {
+    background:  rgba(245, 149, 23, 0.5);
+}
+
+.check-btn {
+    border: none;
+    outline: none;
+    background: green;
+    color: white;
+    width: 30px;
+    height: 37px;
+}
+
+.check-btn:hover {
+    background:  rgba(76, 252, 155, 0.5);
+}
+
+.fa-edit,
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.check {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.mensaje-error {
+    color: rgb(245, 50, 50);
+    text-align: center;
+    font-weight: bold;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Agregar Informacion</h1>
+    </header>
+
+    <div class="container" name='form'>
+        <form class="form">
+            <div class="form-grupo">
+                <label class="form-label">Titulo</label>
+                <div>
+                    <input class="form-input titulo" type="text" maxlength="28">
+                </div>
+            </div>
+            <div class="form-grupo">
+                <label class="form-label">Descripcion</label>
+                <div>
+                    <input class="form-input descripcion" type="text" maxlength="28">
+                </div>
+            </div>
+            <div class="div-boton">
+                <button type="submit" class="form-btn">Enviar</button>
+            </div>
+            <div class="select">
+                <select class="filtrar-info">
+                    <option value="todo">Todo</option>
+                    <option value="completas">Completas</option>
+                    <option value="incompletas">Incompletas</option>
+                </select>
+            </div>
+            <p class="mensaje-error"></p>
+        </form>
+        <!-- TABLE -->
+        <table class="informacion-dom">
+            <tbody class="lista-datos"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/d83c9c9ae8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
